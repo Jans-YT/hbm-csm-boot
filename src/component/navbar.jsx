@@ -11,13 +11,13 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
-
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
+const navigateToLogin = () => {
+  // Change the page URL to the home page
+  window.location.href = '/'; // Replace '/home' with the actual path to your home page
+};
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -42,8 +42,6 @@ export default function Nav() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            
-
             <Transition
               as={Fragment}
               enter="transition ease-out duration-200"
@@ -55,20 +53,16 @@ export default function Nav() {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
-                  
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-    
                 </div>
               </Popover.Panel>
             </Transition>
           </Popover>
-
-          
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
+          <a href="#" onClick={navigateToLogin} className="text-sm font-semibold leading-6 text-gray-900">
+            Log Out <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
@@ -96,10 +90,6 @@ export default function Nav() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                
-                    
-                  
-               
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -124,7 +114,7 @@ export default function Nav() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Log Out
                 </a>
               </div>
             </div>
@@ -134,5 +124,3 @@ export default function Nav() {
     </header>
   )
 }
-
-
