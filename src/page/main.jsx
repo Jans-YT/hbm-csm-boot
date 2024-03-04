@@ -10,7 +10,7 @@ function Main() {
             <header>
                 <Side />
             </header>
-            <div className='flex flex-col flex-1'>
+            <div className='flex flex-col flex-1 ml-64 px-4'>
                 <Nav />
                 <Utama />
                 {/* You can add Utama component here if needed */}

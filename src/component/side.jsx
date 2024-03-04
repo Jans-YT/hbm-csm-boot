@@ -1,34 +1,33 @@
 import React from 'react';
 
-
-function side() {
+function Side() {
   const navigateToHomePage = () => {
     // Change the page URL to the home page
     window.location.href = '/main'; // Replace '/home' with the actual path to your home page
   };
-  const navigateToabtPage = () => {
+  const navigateToAboutPage = () => {
     // Change the page URL to the home page
     window.location.href = '/About'; // Replace '/home' with the actual path to your home page
   };
-  const navigateTosetPage = () => {
+  const navigateToLoginPage = () => {
     // Change the page URL to the home page
     window.location.href = '/Lod'; // Replace '/home' with the actual path to your home page
   };
 
   return (
-    <div className="flex flex-col h-screen w-64 bg-gray-900 text-white">
+    <div className="fixed top-0 left-0 h-screen w-64 bg-gray-900 text-white overflow-y-auto">
       {/* Sidebar header */}
-      <div className="flex items-center justify-center h-16">
-        <span>Sidebar</span>
+      <div className="flex items-center justify-center h-16 md:h-20">
+        <span className="text-lg md:text-xl">Sidebar</span>
       </div>
 
       {/* Sidebar content */}
       <div className="flex flex-col flex-grow p-4">
         {/* Menu items */}
         <div className="mb-auto">
-          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateToHomePage} >Home</button>
-          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateToabtPage} >About Us</button>
-          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateTosetPage} >Login</button>
+          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateToHomePage}>Home</button>
+          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateToAboutPage}>About Us</button>
+          <button className="w-full py-2 text-left hover:bg-gray-800" onClick={navigateToLoginPage}>Login</button>
         </div>
 
         {/* Setting button */}
@@ -44,4 +43,4 @@ function side() {
   );
 }
 
-export default side;
+export default Side;
