@@ -58,11 +58,11 @@ function Main() {
 
       {/* Form to add new text item */}
       <form onSubmit={(e) => { e.preventDefault(); addTextItem(); }} >
-        <input 
-          type="text" 
-          placeholder="Text" 
-          value={textFormData.text} 
-          onChange={(e) => setTextFormData({ text: e.target.value })} 
+        <input
+          type="text"
+          placeholder="Text"
+          value={textFormData.text}
+          onChange={(e) => setTextFormData({ text: e.target.value })}
         />
         <button type="submit">Add Text</button>
       </form>
@@ -89,22 +89,22 @@ function Main() {
 
       {/* Form to add new data item */}
       <form onSubmit={(e) => { e.preventDefault(); addItem(); }}>
-        <input 
-          type="text" 
-          placeholder="Name" 
-          value={formData.name} 
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
+        <input
+          type="text"
+          placeholder="Name"
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
-        <input 
-          type="url" 
-          placeholder="Image URL" 
-          value={formData.image} 
-          onChange={(e) => setFormData({ ...formData, image: e.target.value })} 
+        <input
+          type="url"
+          placeholder="Image URL"
+          value={formData.image}
+          onChange={(e) => setFormData({ ...formData, image: e.target.value })}
         />
-        <textarea 
-          placeholder="Description" 
-          value={formData.description} 
-          onChange={(e) => setFormData({ ...formData, description: e.target.value })} 
+        <textarea
+          placeholder="Description"
+          value={formData.description}
+          onChange={(e) => setFormData({ ...formData, description: e.target.value })}
         />
         <button type="submit">Add Data</button>
       </form>
